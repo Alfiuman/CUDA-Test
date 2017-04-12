@@ -9,11 +9,11 @@
 
 int main(int argc, char ** argv)
 {
-	int parall = SHARED;
-	int numRuns = 100;
+	int parall = 2;
+	int numRuns = 20;
 
 	Matrix<float> prima(5000, 1000);
-	Matrix<float> seconda(1000, 600);
+	Matrix<float> seconda(1000, 2000);
 	Matrix<float> risultato(1, 1);
 
 	prima.assign(7.0f);
@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
 
 	for (int i = 0; i < risultato.rows_ * risultato.cols_; i++)
 	{
-		std::cout << risultato.elements_[i] << "   " << i << std::endl;
+		std::cout << risultato.elements_[i] << "   " << i << std::endl; 
 	}
 
 	std::cin.get();
